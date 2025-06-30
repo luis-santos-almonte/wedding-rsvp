@@ -1,0 +1,562 @@
+/* Reset general */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Playfair Display', serif;
+  background: #EDC6B7; /* rosa pastel claro de fondo */
+  color: #0A3428; /* verde muy oscuro para texto */
+  scroll-behavior: smooth;
+  line-height: 1.5;
+}
+
+/* ===== Hero ===== */
+.hero {
+  position: relative;
+  padding: 40px 20px;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  overflow: hidden;
+  background: #F7F7F5; /* rosa/piel suave */
+}
+
+.decor-top-left,
+.decor-bottom-right {
+  opacity: 0.7;
+  pointer-events: none;
+  z-index: 0;
+}
+
+.decor-top-left {
+  position: absolute;
+  top: -50px;
+  left: -26px;
+  width: 200px;
+  transform: rotate(15deg) scaleX(-1);
+}
+
+.decor-bottom-right {
+  position: absolute;
+  bottom: -50px;
+  right: -50px;
+  width: 160px;
+  transform: rotate(15deg) scaleY(-1);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1;
+  max-width: 90%;
+}
+
+.hero-title {
+  font-family: 'Great Vibes', cursive;
+  margin-bottom: 10px;
+  color: #115945; /* verde esmeralda oscuro */
+}
+
+.hero-subtitle {
+  font-size: 18px;
+  margin-bottom: 24px;
+  color: #0A3428;
+}
+
+/* Fecha central */
+.date-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  text-transform: uppercase;
+  margin: 20px 0;
+  font-family: 'Segoe UI', sans-serif;
+  color: #0A3428;
+}
+
+.date-side {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70px;
+  font-size: 12px;
+  border-top: 1px solid #115945;
+  border-bottom: 1px solid #115945;
+}
+
+.date-side hr {
+  margin: 3px auto;
+  width: 70%;
+  border-color: #115945;
+}
+
+.date-side span {
+  font-size: 14px;
+}
+
+.date-center {
+  text-align: center;
+  line-height: 1.1;
+}
+
+.month {
+  font-size: 12px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #115945;
+}
+
+.day {
+  font-size: 40px;
+  font-weight: bold;
+  margin: 4px 0;
+  color: #0A3428;
+}
+
+.year {
+  font-size: 12px;
+  color: #0A3428;
+}
+
+/* Botones redondos */
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  flex-wrap: wrap;
+  margin-top: 40px;
+}
+
+.button-circle {
+  position: relative;
+  width: 80px;
+  height: 80px;
+  background: #115945; /* verde esmeralda oscuro */
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.button-circle:hover {
+  background-color: #0A3428; /* verde muy oscuro */
+}
+
+.button-circle .icon img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  pointer-events: none;
+  filter: brightness(100%) contrast(100%);
+}
+
+/* ===== Countdown ===== */
+.countdown-section {
+  background-color: #f3dad0; /* rosa pastel claro */
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Playfair Display', serif;
+  color: #0A3428;
+}
+
+.countdown-section h2 {
+  font-size: 28px;
+  margin-bottom: 20px;
+  color: #115945;
+  font-weight: 700;
+}
+
+#countdown {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+#countdown div {
+  background: #FFFFFF;
+  padding: 15px;
+  border-radius: 12px;
+  min-width: 70px;
+  box-shadow: 0 4px 8px rgba(10, 52, 40, 0.1);
+  color: #0A3428;
+}
+
+#countdown span {
+  display: block;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+#countdown small {
+  font-size: 14px;
+  color: #115945;
+}
+
+/* ===== Location ===== */
+.location-section {
+  background-color: #F7F7F5; /* rosa/piel suave */
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #0A3428;
+}
+
+.location-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #115945;
+}
+
+.location-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.location-info h3 {
+  font-size: 20px;
+  color: #0A3428;
+  margin-bottom: 12px;
+}
+
+.map-container {
+  width: 100%;
+  max-width: 600px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(10, 52, 40, 0.1);
+}
+
+/* ===== Dresscode ===== */
+.dresscode-section {
+  background-color: #f3dad0; /* rosa pastel claro */
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Playfair Display', serif;
+  color: #0A3428;
+}
+
+.dresscode-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #115945;
+  font-weight: 700;
+}
+
+.dresscode-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.dresscode-image {
+  max-width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 8px rgba(10, 52, 40, 0.1);
+  background-color: #F7F7F5;
+}
+
+.dresscode-content p {
+  font-size: 16px;
+  color: #0A3428;
+  line-height: 1.6;
+  padding: 0 10px;
+}
+
+/* ===== Gifts ===== */
+.gifts-section {
+  background-color: #F7F7F5; /* rosa/piel suave */
+  padding: 40px 20px;
+  text-align: center;
+  font-family: 'Playfair Display', serif;
+  color: #0A3428;
+}
+
+.gifts-section h2 {
+  font-size: 24px;
+  margin-bottom: 20px;
+  color: #115945;
+  font-weight: 700;
+}
+
+.gifts-intro {
+  font-size: 16px;
+  max-width: 600px;
+  margin: 0 auto 30px;
+  color: #115945;
+  line-height: 1.5;
+}
+
+.gift-options {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.gift-card {
+  background: #f3dad0; /* rosa pastel claro */
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(10, 52, 40, 0.05);
+  text-align: left;
+  color: #0A3428;
+}
+
+.gift-card h3 {
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: #0A3428;
+}
+
+.gift-card p {
+  font-size: 15px;
+  color: #115945;
+  margin: 5px 0;
+}
+
+.gift-card code {
+  font-family: monospace;
+  background: #F7F7F5;
+  padding: 2px 4px;
+  border-radius: 4px;
+  color: #0A3428;
+}
+
+/* ===== Thanks ===== */
+.thanks-section {
+  background-color: #FFFFFF;
+  text-align: center;
+  padding: 40px 20px;
+  font-family: 'Playfair Display', serif;
+  color: #0A3428;
+}
+
+.thanks-section p {
+  font-size: 18px;
+  margin: 10px 0;
+}
+
+.heart {
+  font-size: 32px;
+  color: #115945; /* verde esmeralda */
+  animation: heartbeat 1.2s infinite;
+  user-select: none;
+}
+
+@keyframes heartbeat {
+  0%, 100% {
+    transform: scale(1);
+  }
+  14%, 42% {
+    transform: scale(1.3);
+  }
+  28%, 70% {
+    transform: scale(1);
+  }
+}
+
+/* ===== Responsive ===== */
+
+/* Móviles pequeños */
+@media (max-width: 480px) {
+  .hero-title {
+    font-size: 60px;
+  }
+
+  .hero-subtitle {
+    font-size: 16px;
+  }
+
+  .date-side {
+    width: 60px;
+    font-size: 11px;
+  }
+
+  .date-center .day {
+    font-size: 32px;
+  }
+
+  .buttons-container {
+    gap: 15px;
+  }
+
+  .button-circle {
+    width: 50px;
+    height: 50px;
+  }
+
+  .button-circle .icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  #countdown {
+    gap: 10px;
+  }
+
+  #countdown div {
+    min-width: 50px;
+    padding: 10px;
+  }
+
+  #countdown span {
+    font-size: 22px;
+  }
+
+  #countdown small {
+    font-size: 12px;
+  }
+
+  .countdown-section h2 {
+    font-size: 20px;
+  }
+
+  .dresscode-content p {
+    padding: 0 5px;
+  }
+}
+
+/* Tablets y desktop */
+@media (min-width: 481px) and (max-width: 767px) {
+  .hero-title {
+    font-size: 32px;
+  }
+
+  .hero-subtitle {
+    font-size: 18px;
+  }
+
+  .date-side {
+    width: 70px;
+    font-size: 12px;
+  }
+
+  .date-center .day {
+    font-size: 36px;
+  }
+
+  .button-circle {
+    width: 65px;
+    height: 65px;
+  }
+
+  .button-circle .icon img {
+    width: 32px;
+    height: 32px;
+  }
+
+  #countdown {
+    gap: 15px;
+  }
+
+  #countdown div {
+    min-width: 60px;
+    padding: 12px;
+  }
+
+  #countdown span {
+    font-size: 24px;
+  }
+
+  #countdown small {
+    font-size: 13px;
+  }
+
+  .countdown-section h2 {
+    font-size: 24px;
+  }
+}
+
+/* Desktop grande */
+@media (min-width: 768px) {
+  .hero-title {
+    font-size: 70px;
+  }
+
+  .hero-subtitle {
+    font-size: 20px;
+  }
+
+  .date-side {
+    width: 100px;
+    font-size: 14px;
+  }
+
+  .date-center .day {
+    font-size: 40px;
+  }
+
+  .buttons-container {
+    gap: 2rem;
+  }
+
+  .button-circle {
+    width: 80px;
+    height: 80px;
+  }
+
+  .button-circle .icon img {
+    width: 40px;
+    height: 40px;
+  }
+
+  #countdown {
+    gap: 20px;
+  }
+
+  #countdown div {
+    min-width: 70px;
+    padding: 15px;
+  }
+
+  #countdown span {
+    font-size: 28px;
+  }
+
+  #countdown small {
+    font-size: 14px;
+  }
+
+  .countdown-section h2 {
+    font-size: 28px;
+  }
+
+  .location-content {
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+  }
+
+  .location-info {
+    max-width: 50%;
+    text-align: left;
+  }
+
+  .gift-options {
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+
+  .gift-card {
+    flex: 1 1 250px;
+    max-width: 300px;
+  }
+}
