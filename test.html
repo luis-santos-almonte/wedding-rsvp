@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Boda - Kelfi & Luis</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Playfair+Display:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <!-- Hero Section (sin cambios) -->
+    <section class="hero">
+      <img
+        src="/assets/images/side-flowers.png"
+        alt="Flor superior izquierda"
+        class="decor-top-left"
+      />
+      <img
+        src="/assets/images/side-flowers.png"
+        alt="Flor inferior derecha"
+        class="decor-bottom-right"
+      />
+      <div class="hero-content">
+        <h1 class="hero-title">Kelfi y Luis</h1>
+        <p class="hero-subtitle">¡Nos casamos!</p>
+        <div class="date-container">
+          <div class="date-side"><span>SÁBADO</span></div>
+          <div class="date-center">
+            <div class="month">Octubre</div>
+            <div class="day">11</div>
+            <div class="year">2025</div>
+          </div>
+          <div class="date-side"><span>4 PM</span></div>
+        </div>
+      </div>
+      <div class="buttons-container">
+        <div class="button-circle" onclick="scrollToSection('gifts')">
+          <div class="icon">
+            <img
+              src="/assets/icons/gift-icon.png"
+              style="
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                filter: brightness(100%) contrast(100%);
+              "
+            />
+          </div>
+        </div>
+        <div class="button-circle" onclick="scrollToSection('dresscode')">
+          <div class="icon">
+            <img
+              src="/assets/icons/dress-icon.png"
+              style="
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                filter: brightness(100%) contrast(100%);
+              "
+            />
+          </div>
+        </div>
+        <div class="button-circle" onclick="scrollToSection('location')">
+          <div class="icon">
+            <img
+              src="/assets/icons/location-icon.png"
+              style="
+                width: 40px;
+                height: 40px;
+                object-fit: contain;
+                filter: brightness(100%) contrast(100%);
+              "
+            />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Countdown Section (sin cambios) -->
+    <section class="countdown-section section">
+      <h2 class="section-title">Faltan...</h2>
+      <div id="countdown">
+        <div class="countdown-item">
+          <span class="countdown-number" id="days">--</span
+          ><small class="countdown-label">d</small>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="hours">--</span
+          ><small class="countdown-label">h</small>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="minutes">--</span
+          ><small class="countdown-label">m</small>
+        </div>
+        <div class="countdown-item">
+          <span class="countdown-number" id="seconds">--</span
+          ><small class="countdown-label">seg</small>
+        </div>
+      </div>
+    </section>
+
+    <!-- Location Section (modificado con iframe) -->
+    <section class="location-section section" id="location">
+      <h2 class="section-title">Lugar de la ceremonia</h2>
+      <div class="location-content">
+        <div class="location-info">
+          <h3>Boho Event Garden</h3>
+          <p class="location-address">
+            Carr. Duarte Vieja, La Vega<br />Frente al residencial Hernández I
+          </p>
+        </div>
+        <div class="map-container">
+          <iframe
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d925.1011409916089!2d-70.51182544157379!3d19.213840697743667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x8eb02b000fd65e59%3A0xfca38a05eac855a2!2sBoho%20Event%20Garden!5e1!3m2!1ses-419!2sdo!4v1751257840195!5m2!1ses-419!2sdo"
+            width="100%"
+            height="100%"
+            style="border: 0"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+          ></iframe>
+        </div>
+      </div>
+    </section>
+
+    <!-- Dress Code Section (modificado) -->
+    <section class="dresscode-section section" id="dresscode">
+      <h2 class="section-title">Código de vestimenta</h2>
+      <div class="dresscode-content">
+        <img
+          src="/assets/images/dresscode.png"
+          alt="Código de vestimenta"
+          class="dresscode-image"
+        />
+        <div class="dresscode-text">
+          <p>
+            Por favor, acompáñanos con atuendo
+            <strong>elegante semi-formal</strong>. Se agradece evitar ropa
+            deportiva o muy casual.
+          </p>
+          <p style="margin-top: 1rem">
+            <strong>Colores recomendados:</strong> Tonos pastel y neutros son
+            perfectos para complementar nuestra paleta de colores.
+          </p>
+          <p class="dresscode-note">
+            ¡Queremos que te sientas cómodo y elegante en nuestro día especial!
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Gifts Section (modificado) -->
+    <section class="gifts-section section" id="gifts">
+      <h2 class="section-title">Regalos</h2>
+      <p class="gifts-intro">
+        Tu presencia es el regalo más importante. Pero si deseas hacernos un
+        detalle, aquí te dejamos algunas sugerencias:
+      </p>
+      <div class="gift-options">
+        <div class="gift-card">
+          <h3>💳 Transferencia bancaria</h3>
+          <p><strong>Banco Popular</strong></p>
+          <p>Cuenta: <code>123-4567890-1</code></p>
+          <p>A nombre de: <strong>Luis Santos</strong></p>
+        </div>
+        <div class="gift-card">
+          <h3>📬 Sobre personal</h3>
+          <p>
+            El día del evento tendremos un espacio discreto si prefieres
+            entregar un sobre con tu aporte en persona.
+          </p>
+        </div>
+        <div class="gift-card">
+          <h3>🎁 Regalo personalizado</h3>
+          <p>
+            Si deseas obsequiarnos algo especial, ¡nos encantará recibirlo con
+            amor! Cualquier detalle pensado con cariño será muy apreciado.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Thanks Section (sin cambios) -->
+    <section class="thanks-section section">
+      <p>
+        Gracias por formar parte de este momento tan especial en nuestras vidas.
+      </p>
+      <p>¡No podemos esperar a celebrar con ustedes! 💕</p>
+      <div class="heart">♥</div>
+    </section>
+
+    <script src="script.js"></script>
+  </body>
+</html>
