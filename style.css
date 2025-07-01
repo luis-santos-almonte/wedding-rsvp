@@ -303,7 +303,6 @@ body {
   border-radius: 16px;
   padding: 20px;
   box-shadow: 0 4px 8px rgba(10, 52, 40, 0.05);
-  text-align: left;
   color: #0A3428;
 }
 
@@ -317,6 +316,7 @@ body {
   font-size: 15px;
   color: #2c2c2c;
   margin: 5px 0;
+  text-align: left;
 }
 
 .gift-card code {
@@ -325,6 +325,12 @@ body {
   padding: 2px 4px;
   border-radius: 4px;
   color: #0A3428;
+}
+
+.gift-icon {
+  font-size: 50px;
+  vertical-align: middle;
+
 }
 
 /* ===== Thanks ===== */
