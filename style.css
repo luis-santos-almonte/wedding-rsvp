@@ -211,8 +211,8 @@ body {
 }
 
 .map-container {
-  width: 100%;
-  max-width: 600px;
+  width: 90vw;
+  height: 400px;
   margin: 0 auto;
   border-radius: 12px;
   overflow: hidden;
@@ -524,9 +524,8 @@ body {
     justify-content: center;
   }
 
-  .location-info {
-    max-width: 50%;
-    text-align: left;
+  .map-container {
+    width: 60vw;
   }
 
   .gift-options {
